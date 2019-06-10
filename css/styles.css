@@ -22,7 +22,7 @@ html {
     height: auto;
   }
 
-  .result-area {
+  .column-style {
       display: flex;
       flex: 1;
       flex-direction: column;
