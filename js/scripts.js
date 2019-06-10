@@ -1,5 +1,7 @@
 const $ = selector => document.querySelector(selector);
 
+
+// Events
 document.addEventListener("DOMContentLoaded", function(event) {
     $("#result").disabled = true;
 });
@@ -13,6 +15,16 @@ $("#format").addEventListener("keyup", e => {
   }
 });
 
+$('.copy-result').addEventListener("click", e => {    
+    const element = $("#result");
+    element.disabled = false;
+    element.select();
+    document.execCommand('copy');
+    element.disabled = true;
+});
+
+
+// Methods
 const validText = text => {
   if (!text) {
     return false;
