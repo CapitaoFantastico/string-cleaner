@@ -1,5 +1,9 @@
 const $ = selector => document.querySelector(selector);
 
+document.addEventListener("DOMContentLoaded", function(event) {
+    $("#result").disabled = true;
+});
+
 $("#format").addEventListener("keyup", e => {
   const value = $("#format").value;
   if (validText(value)) {
